@@ -1,0 +1,37 @@
+[
+  {
+    "name": "auth-login",
+    "path": "/auth/login",
+    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\login.vue",
+    "chunkName": "pages/auth/login",
+    "_name": "_5ec30cce"
+  },
+  {
+    "name": "auth-resetPass",
+    "path": "/auth/resetPass",
+    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\resetPass.vue",
+    "chunkName": "pages/auth/resetPass",
+    "_name": "_597a4165"
+  },
+  {
+    "name": "auth-resetPassMessage",
+    "path": "/auth/resetPassMessage",
+    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\resetPassMessage.vue",
+    "chunkName": "pages/auth/resetPassMessage",
+    "_name": "_26bf9f92"
+  },
+  {
+    "name": "auth-signup",
+    "path": "/auth/signup",
+    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\signup.vue",
+    "chunkName": "pages/auth/signup",
+    "_name": "_740f0bfa"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_4b25779f"
+  }
+]
