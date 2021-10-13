@@ -1,15 +1,18 @@
 <template>
   <v-app dark>
     <v-app-bar fixed app>
+
       <v-spacer />
       <v-toolbar-title style="padding-right: 10px" v-text="title" />
       <nuxt-link to="/">
         <img src="/logo/favicon_scsk.jpg" style="width: 50px" />
       </nuxt-link>
       <v-spacer />
+
       <v-btn v-if="!user" color="primary" nuxt to="/auth/login">
         Sing In / Sign Up
       </v-btn>
+
       <v-menu v-else offset-y>
         <template #activator="{ on }">
           <v-btn v-on="on">
@@ -22,6 +25,7 @@
             <strong class="mx-3">{{ user.displayName }}</strong>
           </v-btn>
         </template>
+
         <v-card>
           <v-list-item-content class="justify-center">
             <div class="mx-auto text-center px-3">
@@ -44,11 +48,13 @@
         </v-card>
       </v-menu>
     </v-app-bar>
+
     <v-main>
       <v-container>
         <Nuxt />
       </v-container>
     </v-main>
+    
     <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>

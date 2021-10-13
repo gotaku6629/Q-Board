@@ -2,6 +2,7 @@
   <v-row justify="center" align="center">
     <v-col>
       <v-row class="mb-5">
+        <!-- 1.images -->
         <v-tabs-items v-model="tab" style="width: 100%; height: 80vh">
           <v-tab-item>
             <v-img
@@ -19,28 +20,51 @@
             ></v-img>
           </v-tab-item>
         </v-tabs-items>
+
+        <!-- 2.trends -->
         <v-tabs v-model="tab" fixed-tabs>
           <v-tab>Trends</v-tab>
           <v-tab>Popular</v-tab>
           <v-tab>Recently Added</v-tab>
         </v-tabs>
       </v-row>
+
+      <!-- 3.create_new_question -->
+      <v-row justify="end" class="mb-4">
+        <v-col cols="12" sm="2" offset-sm="2">
+          <v-btn
+            block
+            color="secondary"
+            nuxt
+            :to="`/createQuestion`"
+            style="text-transform: none"
+            >+Create Question</v-btn
+          >
+        </v-col>
+      </v-row>
+
       <v-row>
         <v-tabs center-active fixed-tabs>
+          <!-- 4.category -->
           <v-tab v-for="category in categories" :key="category">
             <v-btn color="primary" x-large>{{ category }}</v-btn>
           </v-tab>
+
+          <!-- 5.question_list -->
           <v-tab-item v-for="category in categories" :key="category">
             <QuestionList :category="category" />
           </v-tab-item>
         </v-tabs>
+
+        <!-- 6.test_post_method_to_AWS -->
         <v-btn
           class="success float-right"
-          @click="post(); 
+          @click="post();
           dialog = false"
         >
           送信
-        </v-btn>        
+        </v-btn>
+
       </v-row>
     </v-col>
   </v-row>
@@ -53,13 +77,9 @@
     data: () => ({
       tab: [],
       categories: [
-        'Animation',
-        'Action',
-        'Comedy',
-        'Artist',
-        'Fiction',
-        'Japan',
-        'Kids',
+        '技術系',
+        '営業系',
+        'スタッフ系',
       ],
       user: null,
     }),
