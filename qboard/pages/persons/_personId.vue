@@ -1,7 +1,7 @@
 <template>
   <v-container>
-
-    <!-- 1.question_head -->
+    <h1> {{$route.params.personId}} </h1>
+    <!-- 1.question_head 
     <v-row v-if="question">
       <v-col cols="6" sm="3">
         <v-btn outlined nuxt to="/"
@@ -12,28 +12,19 @@
         <h1>{{ question.title }} {{ question.date }}</h1>
       </v-col>
     </v-row>
+    -->
 
     <!-- 2.image -->
-    <v-row v-if="question" justify="center">
-      <v-col v-if="question.lebel === '1'">        
-        <img src="/logo/hito_blue.png" height="300px">
-        <h1>{{ question.user }}</h1>
+    <v-row justify="center">
+      <v-col>        
+        <img src="/logo/hito_green.png" height="300px">
       </v-col>
-      <v-col v-else-if="question.lebel === '2'">        
-        <img src="/logo/hito_yellow.png" height="300px">
-        <h1>{{ question.user }}</h1>
-      </v-col>
-      <v-col v-else-if="question.lebel === '3'">        
-        <img src="/logo/hito_red.png" height="300px">
-        <h1>{{ question.user }}</h1>
-      </v-col>  
       <v-col>
-        <h1> 詳細</h1>
-        <h2>{{ question.detail }}</h2>
+        <h1> POINT </h1>
+        <h2> 27 </h2>
       </v-col>
     </v-row>
-    
-    <!-- 3.botton -->
+    <!-- 3.botton
     <v-row justify="end" class="mb-4">
       <v-col cols="12" sm="2" offset-sm="2">
         <v-btn
@@ -46,8 +37,8 @@
         >
       </v-col>
     </v-row>
-
-    <!-- 4.answer_list -->
+    -->
+    <!-- 4.answer_list 
     <v-row v-for="answer in answers" :key="answer.id" justify="center">
       <v-col cols="12" sm="10">
         <v-card color="black" outlined tile class="py-5">
@@ -58,7 +49,7 @@
             <v-btn
               color="primary"
               nuxt
-              :to="`/persons/${answer.userId}`"
+              :to="`/questions/${answer.userId}`"
               style="text-transform: none"
               >Check Answer Room</v-btn
             >
@@ -66,7 +57,7 @@
         </v-card>
       </v-col>
     </v-row>
-
+    -->
   </v-container>
 </template>
 
@@ -78,17 +69,6 @@ export default {
   computed: {
     question() {
       const question = this.$store.getters['questions/byId'](this.$route.params.id)      
-      // if (question) {
-      //  const start = question.start.toDate()
-      //  const end = question.end.toDate()
-      //  question.date = `${start.getFullYear()}/${
-      //    start.getMonth() + 1
-      //  }/${start.getDate()}/(${weekday[start.getDay()]})`
-      //  question.time = `${start.getHours()}:${('00' + start.getMinutes()).slice(
-      //    -2
-      //  )}~${end.getHours()}:${('00' + end.getMinutes()).slice(-2)}`
-      // }
-
       return question
     },
 
