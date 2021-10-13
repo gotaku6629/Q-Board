@@ -4,11 +4,14 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _5ec30cce = () => interopDefault(import('..\\pages\\auth\\login.vue' /* webpackChunkName: "pages/auth/login" */))
-const _597a4165 = () => interopDefault(import('..\\pages\\auth\\resetPass.vue' /* webpackChunkName: "pages/auth/resetPass" */))
-const _26bf9f92 = () => interopDefault(import('..\\pages\\auth\\resetPassMessage.vue' /* webpackChunkName: "pages/auth/resetPassMessage" */))
-const _740f0bfa = () => interopDefault(import('..\\pages\\auth\\signup.vue' /* webpackChunkName: "pages/auth/signup" */))
-const _4b25779f = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _5072bbe5 = () => interopDefault(import('..\\pages\\auth\\login.vue' /* webpackChunkName: "pages/auth/login" */))
+const _7efe8cfc = () => interopDefault(import('..\\pages\\auth\\resetPass.vue' /* webpackChunkName: "pages/auth/resetPass" */))
+const _7a9b27ca = () => interopDefault(import('..\\pages\\auth\\resetPassMessage.vue' /* webpackChunkName: "pages/auth/resetPassMessage" */))
+const _0a3eadcc = () => interopDefault(import('..\\pages\\auth\\signup.vue' /* webpackChunkName: "pages/auth/signup" */))
+const _3857bd19 = () => interopDefault(import('..\\pages\\questions\\_id.vue' /* webpackChunkName: "pages/questions/_id" */))
+const _24979e8e = () => interopDefault(import('..\\pages\\questions\\_questionId\\createAnswer.vue' /* webpackChunkName: "pages/questions/_questionId/createAnswer" */))
+const _45e368ee = () => interopDefault(import('..\\pages\\questions\\_questionId\\_answerId.vue' /* webpackChunkName: "pages/questions/_questionId/_answerId" */))
+const _2c9ff814 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -23,23 +26,35 @@ export const routerOptions = {
 
   routes: [{
     path: "/auth/login",
-    component: _5ec30cce,
+    component: _5072bbe5,
     name: "auth-login"
   }, {
     path: "/auth/resetPass",
-    component: _597a4165,
+    component: _7efe8cfc,
     name: "auth-resetPass"
   }, {
     path: "/auth/resetPassMessage",
-    component: _26bf9f92,
+    component: _7a9b27ca,
     name: "auth-resetPassMessage"
   }, {
     path: "/auth/signup",
-    component: _740f0bfa,
+    component: _0a3eadcc,
     name: "auth-signup"
   }, {
+    path: "/questions/:id?",
+    component: _3857bd19,
+    name: "questions-id"
+  }, {
+    path: "/questions/:questionId?/createAnswer",
+    component: _24979e8e,
+    name: "questions-questionId-createAnswer"
+  }, {
+    path: "/questions/:questionId?/:answerId?",
+    component: _45e368ee,
+    name: "questions-questionId-answerId"
+  }, {
     path: "/",
-    component: _4b25779f,
+    component: _2c9ff814,
     name: "index"
   }],
 

@@ -12,7 +12,7 @@ export const getters = {
     const res = state.items.filter(answer => answer.id === answerId)
     return res.length > 0 ? res[0] : null
   },
-  byMovie: (state) => (questionId) => {
+  byQuestion: (state) => (questionId) => {
     return state.items.filter(answer => answer.question_uid === questionId)
   },
   countAudience: (state) => (questionId) => {
@@ -31,53 +31,53 @@ export const actions = {
     // return the promise returned by `bindFirestoreRef`
     return bindFirestoreRef('items', this.$fire.firestore.collection('answers'))
   }),
-  add: firestoreAction(function (_, { title, users, detail, adminId, skyway, movieId, id }) {
-    return this.$fire.firestore.collection('rooms').add({ title, users, detail, admin_uid: adminId, skyway, movie_uid: movieId, id })
+  add: firestoreAction(function (_, { title, users, detail, adminId, skyway, questionId, id }) {
+    return this.$fire.firestore.collection('answers').add({ title, users, detail, admin_uid: adminId, skyway, question_uid: questionId, id })
   }),
-  remove: firestoreAction(function ({ getters }, { roomId }) {
+  remove: firestoreAction(function ({ getters }, { answerId }) {
     const user = this.$fire.auth().currentUser;
 
     if (user === null) {
       throw new Error('is not logged in')
     }
 
-    const room = getters.byId(roomId);
-    if (!room) {
-      throw new Error('invalid room id')
+    const answer = getters.byId(answerId);
+    if (!answer) {
+      throw new Error('invalid answer id')
     }
 
-    if (room.admin_uid !== user.uid) {
+    if (answer.admin_uid !== user.uid) {
       throw new Error('permission denied')
     }
 
-    return this.$fire.firestore.collection('rooms').doc(roomId).delete()
+    return this.$fire.firestore.collection('answers').doc(answerId).delete()
   }),
-  join: firestoreAction(function ({ getters }, { roomId }) {
+  join: firestoreAction(function ({ getters }, { answerId }) {
     const user = this.$fire.auth.currentUser;
 
     if (user === null) {
       throw new Error('is not logged in')
     }
 
-    const room = getters.byId(roomId)
-    if (!room) {
-      throw new Error('invalid room id')
+    const answer = getters.byId(answerId)
+    if (!answer) {
+      throw new Error('invalid answer id')
     }
 
-    return this.$fire.firestore.collection('rooms').doc(roomId).update({ users: this.$fireModule.firestore.FieldValue.arrayUnion(user.uid) })
+    return this.$fire.firestore.collection('answers').doc(answerId).update({ users: this.$fireModule.firestore.FieldValue.arrayUnion(user.uid) })
   }),
-  leave: firestoreAction(function ({ getters }, { roomId }) {
+  leave: firestoreAction(function ({ getters }, { answerId }) {
     const user = this.$fire.auth.currentUser;
 
     if (user === null) {
       throw new Error('is not logged in')
     }
 
-    const room = getters.byId(roomId)
-    if (!room) {
-      throw new Error('invalid room id')
+    const answer = getters.byId(answerId)
+    if (!answer) {
+      throw new Error('invalid answer id')
     }
 
-    return this.$fire.firestore.collection('rooms').doc(roomId).update({ users: this.$fireModule.firestore.FieldValue.arrayRemove(user.uid) })
+    return this.$fire.firestore.collection('answers').doc(answerId).update({ users: this.$fireModule.firestore.FieldValue.arrayRemove(user.uid) })
   }),
 }

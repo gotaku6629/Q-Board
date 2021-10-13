@@ -2,36 +2,57 @@
   {
     "name": "auth-login",
     "path": "/auth/login",
-    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\login.vue",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\auth\\\\login.vue",
     "chunkName": "pages/auth/login",
-    "_name": "_5ec30cce"
+    "_name": "_5072bbe5"
   },
   {
     "name": "auth-resetPass",
     "path": "/auth/resetPass",
-    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\resetPass.vue",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\auth\\\\resetPass.vue",
     "chunkName": "pages/auth/resetPass",
-    "_name": "_597a4165"
+    "_name": "_7efe8cfc"
   },
   {
     "name": "auth-resetPassMessage",
     "path": "/auth/resetPassMessage",
-    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\resetPassMessage.vue",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\auth\\\\resetPassMessage.vue",
     "chunkName": "pages/auth/resetPassMessage",
-    "_name": "_26bf9f92"
+    "_name": "_7a9b27ca"
   },
   {
     "name": "auth-signup",
     "path": "/auth/signup",
-    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\auth\\\\signup.vue",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\auth\\\\signup.vue",
     "chunkName": "pages/auth/signup",
-    "_name": "_740f0bfa"
+    "_name": "_0a3eadcc"
+  },
+  {
+    "name": "questions-id",
+    "path": "/questions/:id?",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\questions\\\\_id.vue",
+    "chunkName": "pages/questions/_id",
+    "_name": "_3857bd19"
+  },
+  {
+    "name": "questions-questionId-createAnswer",
+    "path": "/questions/:questionId?/createAnswer",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\questions\\\\_questionId\\\\createAnswer.vue",
+    "chunkName": "pages/questions/_questionId/createAnswer",
+    "_name": "_24979e8e"
+  },
+  {
+    "name": "questions-questionId-answerId",
+    "path": "/questions/:questionId?/:answerId?",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\questions\\\\_questionId\\\\_answerId.vue",
+    "chunkName": "pages/questions/_questionId/_answerId",
+    "_name": "_45e368ee"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\media2019\\\\Qboard\\\\qboard\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_4b25779f"
+    "_name": "_2c9ff814"
   }
 ]
