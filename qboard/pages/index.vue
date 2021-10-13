@@ -56,7 +56,7 @@
           </v-tab-item>
         </v-tabs>
 
-        <!-- 6.test_post_method_to_AWS -->
+        <!-- 6.test_post_method_to_AWS
         <v-btn
           class="success float-right"
           @click="post();
@@ -64,7 +64,7 @@
         >
           送信
         </v-btn>
-
+        -->
       </v-row>
     </v-col>
   </v-row>

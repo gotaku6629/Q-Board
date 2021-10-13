@@ -35,6 +35,13 @@
     "_name": "_0a3eadcc"
   },
   {
+    "name": "persons-personId",
+    "path": "/persons/:personId?",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\persons\\\\_personId.vue",
+    "chunkName": "pages/persons/_personId",
+    "_name": "_4e64babd"
+  },
+  {
     "name": "questions-id",
     "path": "/questions/:id?",
     "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\questions\\\\_id.vue",

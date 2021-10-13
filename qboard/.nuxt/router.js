@@ -9,6 +9,7 @@ const _5072bbe5 = () => interopDefault(import('..\\pages\\auth\\login.vue' /* we
 const _7efe8cfc = () => interopDefault(import('..\\pages\\auth\\resetPass.vue' /* webpackChunkName: "pages/auth/resetPass" */))
 const _7a9b27ca = () => interopDefault(import('..\\pages\\auth\\resetPassMessage.vue' /* webpackChunkName: "pages/auth/resetPassMessage" */))
 const _0a3eadcc = () => interopDefault(import('..\\pages\\auth\\signup.vue' /* webpackChunkName: "pages/auth/signup" */))
+const _4e64babd = () => interopDefault(import('..\\pages\\persons\\_personId.vue' /* webpackChunkName: "pages/persons/_personId" */))
 const _3857bd19 = () => interopDefault(import('..\\pages\\questions\\_id.vue' /* webpackChunkName: "pages/questions/_id" */))
 const _24979e8e = () => interopDefault(import('..\\pages\\questions\\_questionId\\createAnswer.vue' /* webpackChunkName: "pages/questions/_questionId/createAnswer" */))
 const _45e368ee = () => interopDefault(import('..\\pages\\questions\\_questionId\\_answerId.vue' /* webpackChunkName: "pages/questions/_questionId/_answerId" */))
@@ -45,6 +46,10 @@ export const routerOptions = {
     path: "/auth/signup",
     component: _0a3eadcc,
     name: "auth-signup"
+  }, {
+    path: "/persons/:personId?",
+    component: _4e64babd,
+    name: "persons-personId"
   }, {
     path: "/questions/:id?",
     component: _3857bd19,

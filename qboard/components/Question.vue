@@ -7,7 +7,6 @@
         <div class="pa-3 text-h5" style="position: absolute; bottom: 0; background-color: rgba(107, 107, 107, 0.5);">
           <span class="primary--text">&#9679;</span>
           <strong> {{ answers.length }} Answers/ </strong>
-          <strong> {{ audience }} Audience </strong>
         </div>
     </div>
     <div v-else-if="question.lebel === '2'">
@@ -15,7 +14,6 @@
         <div class="pa-3 text-h5" style="position: absolute; bottom: 0; background-color: rgba(107, 107, 107, 0.5);">
           <span class="primary--text">&#9679;</span>
           <strong> {{ answers.length }} Answers/ </strong>
-          <strong> {{ audience }} Audience </strong>
         </div>
     </div>
     <div v-else-if="question.lebel === '3'">
@@ -23,17 +21,9 @@
         <div class="pa-3 text-h5" style="position: absolute; bottom: 0; background-color: rgba(107, 107, 107, 0.5);">
           <span class="primary--text">&#9679;</span>
           <strong> {{ answers.length }} Answers/ </strong>
-          <strong> {{ audience }} Audience </strong>
         </div>
     </div>    
-    <!--
-    <img src="/logo/hito_blue.png" height="300px">
-      <div class="pa-3 text-h5" style="position: absolute; bottom: 0; background-color: rgba(107, 107, 107, 0.5);">
-        <span class="primary--text">&#9679;</span>
-        <strong> {{ answers.length }} Answers/ </strong>
-        <strong> {{ audience }} Audience </strong>
-      </div>
-    -->
+
     <v-card-text class="text-center">
       <h2>{{ question.date }}</h2>
       <!-- <h2>{{ question.time }}</h2> -->
@@ -92,9 +82,6 @@ export default {
     answers() {
       return this.$store.getters['answers/byQuestion'](this.questionId)
     },
-    audience() {
-      return this.$store.getters['answers/countAudience'](this.questionId)
-    }
   },
   created() {
     this.$fire.auth.onAuthStateChanged((user) => {

@@ -15,15 +15,6 @@ export const getters = {
   byQuestion: (state) => (questionId) => {
     return state.items.filter(answer => answer.question_uid === questionId)
   },
-  countAudience: (state) => (questionId) => {
-    const answers = state.items.filter(answer => answer.question_uid === questionId)
-    let count = 0
-    for (const answer of answers) {
-      count += answer.users.length
-    }
-
-    return count
-  },
 }
 
 export const actions = {
