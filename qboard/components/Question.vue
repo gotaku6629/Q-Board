@@ -60,11 +60,11 @@ export default {
 
       return question
     },
-    answer() {
+    answers() {
       return this.$store.getters['answers/byQuestion'](this.questionId)
     },
     audience() {
-      return this.$store.getters['rooms/countAudience'](this.questionId)
+      return this.$store.getters['answers/countAudience'](this.questionId)
     }
   },
   created() {
