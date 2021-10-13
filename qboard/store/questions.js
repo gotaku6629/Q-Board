@@ -16,7 +16,6 @@ export const getters = {
     if (!category) {
       return state.items
     }
-
     return state.items.filter(question => question.category === category)
   }
 }
@@ -24,6 +23,9 @@ export const getters = {
 export const actions = {
   bind: firestoreAction(function ({ bindFirestoreRef }) {
     // return the promise returned by `bindFirestoreRef`
-    return bindFirestoreRef('items', this.$fire.firestore.collection('questions').orderBy('start'))
+    return bindFirestoreRef('items', this.$fire.firestore.collection('questions'))// .orderBy('start'))
   }),
+  add: firestoreAction(function (_, { user, category, date, title, detail, lebel}) {
+    return this.$fire.firestore.collection('questions').add({ user, date, category, title, detail, lebel})
+  }),  
 }

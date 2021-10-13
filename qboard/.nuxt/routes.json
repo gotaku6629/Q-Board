@@ -1,5 +1,12 @@
 [
   {
+    "name": "createQuestion",
+    "path": "/createQuestion",
+    "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\createQuestion.vue",
+    "chunkName": "pages/createQuestion",
+    "_name": "_755c028e"
+  },
+  {
     "name": "auth-login",
     "path": "/auth/login",
     "component": "C:\\\\Users\\\\media2019\\\\Q-Board\\\\qboard\\\\pages\\\\auth\\\\login.vue",

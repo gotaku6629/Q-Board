@@ -4,6 +4,7 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _755c028e = () => interopDefault(import('..\\pages\\createQuestion.vue' /* webpackChunkName: "pages/createQuestion" */))
 const _5072bbe5 = () => interopDefault(import('..\\pages\\auth\\login.vue' /* webpackChunkName: "pages/auth/login" */))
 const _7efe8cfc = () => interopDefault(import('..\\pages\\auth\\resetPass.vue' /* webpackChunkName: "pages/auth/resetPass" */))
 const _7a9b27ca = () => interopDefault(import('..\\pages\\auth\\resetPassMessage.vue' /* webpackChunkName: "pages/auth/resetPassMessage" */))
@@ -25,6 +26,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/createQuestion",
+    component: _755c028e,
+    name: "createQuestion"
+  }, {
     path: "/auth/login",
     component: _5072bbe5,
     name: "auth-login"

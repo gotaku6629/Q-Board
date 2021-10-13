@@ -31,8 +31,8 @@ export const actions = {
     // return the promise returned by `bindFirestoreRef`
     return bindFirestoreRef('items', this.$fire.firestore.collection('answers'))
   }),
-  add: firestoreAction(function (_, { title, users, detail, adminId, skyway, questionId, id }) {
-    return this.$fire.firestore.collection('answers').add({ title, users, detail, admin_uid: adminId, skyway, question_uid: questionId, id })
+  add: firestoreAction(function (_, { title, detail, userId, questionId}) {
+    return this.$fire.firestore.collection('answers').add({ title, detail, userId, question_uid: questionId})
   }),
   remove: firestoreAction(function ({ getters }, { answerId }) {
     const user = this.$fire.auth().currentUser;

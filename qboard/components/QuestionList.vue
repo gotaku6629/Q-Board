@@ -1,6 +1,9 @@
 <template>
-  <v-card class="d-flex justify-space-around flex-wrap" style="min-height: 90vh">
+  <v-card class="d-flex justify-space-around flex-wrap" style="min-height: 65vh">
     <Question v-for="question in questions" :key="question.id" :question-id="question.id" />
+    <!--
+    <Question v-for="question in questions" :key="question.id" />
+    -->
   </v-card>
 </template>
 <script>
